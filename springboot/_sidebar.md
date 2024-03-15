@@ -1,0 +1,12 @@
+<!-- docs/_sidebar.md -->
+- [背景概述](/README.md)
+- [模块依赖](/design.md)
+- [快速开始](/quickstart.md)
+- [账号管理](/account.md)
+- [数据源](/datasource.md)
+- [数据模型](/model.md)
+- [模型属性](/model-field.md)
+- [应用管理](/app.md)
+- [服务管理](/server.md)
+- [接口开发](/api.md)
+- [函数开发](/function.md)
