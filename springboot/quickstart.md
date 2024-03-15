@@ -124,6 +124,7 @@ public class UserFunctionImpl implements UserFunction {
     }
 }
 ```
+在spring.factories中配置UserFunctionImpl实现自动注入
 
 > 说明：此函数实现时整个过程中唯一需要些的代码。
 
