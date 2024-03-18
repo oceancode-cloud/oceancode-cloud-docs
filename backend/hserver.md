@@ -1,2 +1,2 @@
 # HServer
-hserver生态
+暂不支持
