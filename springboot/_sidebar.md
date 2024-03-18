@@ -10,3 +10,5 @@
 - [服务管理](/server.md)
 - [接口开发](/api.md)
 - [函数开发](/function.md)
+- [权限控制](/permission.md)
+- [缓存管理](/cache.md)
