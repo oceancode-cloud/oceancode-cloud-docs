@@ -7,6 +7,9 @@
 
 <img src="./images/qq.png"/>
 
+- 钉钉搜索`oceancode`加入对应群组
+
+<img src="./images/dingding.png"/>
 
 ## 问题反馈与建议
 遇到bug可到对应模块提issue,我们会在第一时间为你解决
