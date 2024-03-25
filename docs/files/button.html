@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Ocean</title>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="../lib/marked/marked.min.js"></script>
+  <script src="../lib/vue/vue.js"></script>
+  <script src="../lib/naive-ui/naive-ui.js"></script>
+  <script src="../lib/ocean-ui/index.umd.cjs"></script>
+  <link href="../lib/marked/theme/naive.css" rel="stylesheet">
+  <link href="../lib/ocean-ui/style.css" rel="stylesheet">
+  <script src="../common.js"></script>
+  <div id="app">
+    <o-context>
+      <component :is="{template:content}"></component>
+    </o-context>
+  </div>
+</body>
+</html>
+<script type="module">
+  const { createApp,ref } = Vue;
+  
+  const App = {
+    setup(){
+      const content = ref();
+      fetchReadme('./demos/button/demo.button.md',data=>content.value=data)
+      return {
+        content
+      }
+    }
+  }
+  const app = createApp(App)
+  app.use(naive)
+  app.use(ocean)
+  app.mount('#app')
+
+</script>
+<style>
+  .n-menu-item-content-header{
+    opacity: 1 !important;
+  }
+</style>
