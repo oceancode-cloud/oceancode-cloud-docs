@@ -7,14 +7,11 @@
 <body>
   <div id="content"></div>
   <script src="./lib/marked/marked.min.js"></script>
-  <!-- <script src="./lib/vue/vue.js"></script>
-    <script src="./lib/naive-ui/naive-ui.js"></script> -->
-    <script src="https://unpkg.com/vue"></script>
-    <!-- 会使用最新版本，你最好指定一个版本 -->
-    <script src="https://unpkg.com/naive-ui"></script>
+  <script src="./lib/vue/vue.js"></script>
+    <script src="./lib/naive-ui/naive-ui.js"></script>
     <script src="./lib/ocean-ui/index.umd.cjs"></script>
   <div id="app">
-    <o-context>
+    <o-app>
       <o-layout>
         <o-simple-layout  background-color="#fff" :has-header="false" has-slider>
           <template #menu>
@@ -26,7 +23,7 @@
           </template>
         </o-simple-layout>
       </o-layout>
-    </o-context>
+    </o-app>
   </div>
 </body>
 </html>
@@ -39,7 +36,6 @@
         return [
           {title:'前端',id:'fronted'},  
           {title:'后端',id:'backend'},
-          
         ]
       }
       const loadMenu = (params)=>{
@@ -57,6 +53,20 @@
                 key:'button',
                 url:{
                   url:'./files/button.html'
+                },
+                value:{}
+              }
+            ]
+          },
+          {
+            label:'数据录入组件',
+            type:'group',
+            children:[
+              {
+                label:'文本输入',
+                key:'text-input',
+                url:{
+                  url:'./files/input.html'
                 },
                 value:{}
               }

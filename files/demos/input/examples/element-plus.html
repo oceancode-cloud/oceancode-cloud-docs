@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Ocean</title>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="../../../../lib/marked/marked.min.js"></script>
+  <script src="../../../../lib/vue/vue.js"></script>
+  <script src="../../../../lib/naive-ui/naive-ui.js"></script>
+  <script src="../../../../lib/ocean-ui/index.umd.cjs"></script>
+  <link href="../../../../lib/marked/theme/naive.css" rel="stylesheet">
+  <link href="../../../../lib/ocean-ui/style.css" rel="stylesheet">
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.12/index.full.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.12/index.min.css" rel="stylesheet">
+  <div id="app">
+    <o-el-app>
+      <el-space direction="vertical">
+        <o-input type="text" size="mini" placeholder="迷你" />
+        <o-input type="text" size="small" placeholder="小" />
+        <o-input type="text" placeholder="中" />
+        <o-input type="text" size="large" placeholder="大" />
+      </el-space>
+    </o-el-app>
+  </div>
+</body>
+</html>
+<script type="module">
+  const { createApp,ref } = Vue;
+  
+  const App = {
+    setup(){
+      return {
+      }
+    }
+  }
+  const app = createApp(App)
+  app.use(ocean)
+  app.use(ElementPlus)
+  app.mount('#app')
+
+</script>
+<style>
+  .n-menu-item-content-header{
+    opacity: 1 !important;
+  }
+</style>

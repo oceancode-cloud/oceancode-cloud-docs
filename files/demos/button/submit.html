@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Ocean</title>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="../../../lib/vue/vue.js"></script>
+  <script src="../../../lib/naive-ui/naive-ui.js"></script>
+  <script src="../../../lib/ocean-ui/index.umd.cjs"></script>
+  <link href="../../../lib/ocean-ui/style.css" rel="stylesheet">
+
+  <div id="app">
+    <o-n-app>
+      <o-space vertical>
+        <div>提交表单数据</div>
+        <o-form ref="Form"></o-form>
+        <o-space>
+          <o-submit-button></o-submit-button>
+          <o-submit-button>自定义文本</o-submit-button>
+        </o-space>
+      </o-space>
+    </o-n-app>
+  </div>
+</body>
+</html>
+<script type="module">
+  const { createApp,ref,h } = Vue;
+  const App = {
+    setup(){
+      const Form = ocean.useForm({
+        items:[
+        {
+          prop:'username',
+          value:'qjw',
+          component:{
+            render(){
+              return h(ocean.OUsernameInput,{icon:{component:ocean.OUsernameIcon,color:'#808695'}})
+            }
+          },
+          rules: {
+            required: true,
+            message: "请输入登录账号",
+          }
+        },
+        {
+          prop:'password',
+          component:{
+            render(){
+              return h(ocean.OPasswordInput,{encode:false,icon:{component:ocean.OPasswordIcon,color:'#808695'}})
+            }
+          },
+          rules: {
+            required: true,
+            message: "请输入登录密码",
+          }
+        }
+      ],
+      on:{
+        submit(params){
+          console.log(params)
+        }
+      }
+      })
+      return {
+        Form
+      }
+    }
+  }
+  const app = createApp(App)
+  app.use(naive)
+  app.use(ocean)
+  app.mount('#app')
+
+</script>
+<style>
+  .n-menu-item-content-header{
+    opacity: 1 !important;
+  }
+</style>

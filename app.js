@@ -20,6 +20,20 @@ function main(){
           }
         ]
       },
+      {
+        label:'数据录入组件',
+        type:'group',
+        children:[
+          {
+            label:'文本输入',
+            key:'text-input',
+            url:{
+              url:'./files/input.html'
+            },
+            value:{}
+          }
+        ]
+      },
     ]
   }
 }

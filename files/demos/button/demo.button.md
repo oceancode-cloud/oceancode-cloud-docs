@@ -8,8 +8,48 @@
 <o-demos-doc>
 <o-demo-doc title="基础" url="./demos/button/basic.demo.md" code-url="./demos/button/basic.code.md"/>
 <o-demo-doc title="虚线按钮" url="./demos/button/dash.demo.md" code-url="./demos/button/dash.demo.md"/>
+  <o-demo-doc title="新增按钮" code-url="./demos/button/add.code.md">
+    可打开弹窗类组件
+    <o-space>
+      <o-add-button></o-add-button>
+      <o-add-button>自定义文本</o-add-button>
+    </o-space>
+    <o-drawer title="新增数据">这里可放入表单或别的组件</o-drawer>
+  </o-demo-doc>
+  <o-demo-doc title="取消按钮" code-url="./demos/button/cancle.code.md">
+    可关闭弹框类组件
+    <o-space>
+      <o-cancle-button></o-cancle-button>
+      <o-cancle-button>自定义文本</o-cancle-button>
+    </o-space>
+  </o-demo-doc>
+  <o-demo-doc title="登录按钮" url="./demos/button/login.html" code-url="./demos/button/login.demo.md"/>
+  <o-demo-doc title="刷新按钮" >
+    可触发表格等数据展示组件刷新
+    <o-space>
+      <o-refresh-button></o-refresh-button>
+      <o-refresh-button>自定义文本</o-refresh-button>
+    </o-space>
+  </o-demo-doc>
+  <o-demo-doc title="重置按钮" >
+    可触发表格等数据展示组件重置查询条件
+    <o-space>
+      <o-reset-button></o-reset-button>
+      <o-reset-button>自定义文本</o-reset-button>
+    </o-space>
+  </o-demo-doc>
+  <o-demo-doc title="提交按钮" url="./demos/button/submit.html" code-url="./demos/button/submit.code.md">
+  </o-demo-doc>
 </o-demos-doc>
+
 ```
+
+## 框架支持
+| 框架/组件 | 是否支持 | 演示示例 | 官网地址 |
+| --- | --- | --- | --- |
+|Naiveui|√|-|<a href="https://www.naiveui.com/zh-CN/os-theme/components/button" target="_blank">Link</a>|
+|Element-Plus|√|-|<a href="https://element-plus.gitee.io/zh-CN/component/button.html" target="_blank">Link</a>
+
 
 ## API
 
